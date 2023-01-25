@@ -1,0 +1,124 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://UI/assets/S2_Pressed.png" type="Texture" id=1]
+[ext_resource path="res://UI/assets/S1_Unpressed.png" type="Texture" id=2]
+[ext_resource path="res://UI/assets/joystick_button.png" type="Texture" id=3]
+[ext_resource path="res://UI/assets/Attack_Pressed.png" type="Texture" id=4]
+[ext_resource path="res://UI/assets/S2_Unpressed.png" type="Texture" id=5]
+[ext_resource path="res://UI/assets/S1_Pressed.png" type="Texture" id=6]
+[ext_resource path="res://UI/assets/Dodge_Unpressed.png" type="Texture" id=7]
+[ext_resource path="res://UI/assets/Dodge_Pressed.png" type="Texture" id=8]
+[ext_resource path="res://UI/assets/Attack_Unpressed.png" type="Texture" id=9]
+[ext_resource path="res://UI/assets/Joystick_BG.png" type="Texture" id=10]
+[ext_resource path="res://UI/assets/SF Atarian System.ttf" type="DynamicFontData" id=11]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 195.5
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 346.0
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 335.0
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 329.41
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 329.41
+
+[sub_resource type="DynamicFont" id=6]
+size = 55
+font_data = ExtResource( 11 )
+
+[node name="Controls" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 106.0
+margin_top = -251.0
+margin_right = 146.0
+margin_bottom = -211.0
+
+[node name="bg" type="TouchScreenButton" parent="Control"]
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 10 )
+shape = SubResource( 1 )
+
+[node name="inner" type="Sprite" parent="Control/bg"]
+position = Vector2( 194.5, 194.5 )
+texture = ExtResource( 3 )
+
+[node name="Control2" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -287.0
+margin_top = -288.0
+margin_right = -247.0
+margin_bottom = -248.0
+
+[node name="attack_button" type="TouchScreenButton" parent="Control2"]
+scale = Vector2( 0.334601, 0.334601 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 4 )
+shape = SubResource( 2 )
+
+[node name="Control3" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -40.0
+margin_top = -40.0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Control3"]
+position = Vector2( -194.809, -454 )
+scale = Vector2( 0.287464, 0.287464 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 1 )
+shape = SubResource( 3 )
+
+[node name="Control4" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -80.0
+margin_top = -184.0
+margin_right = -40.0
+margin_bottom = -144.0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Control4"]
+position = Vector2( -373, -240 )
+scale = Vector2( 0.292776, 0.292776 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 6 )
+shape = SubResource( 4 )
+
+[node name="Control5" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -497.0
+margin_top = -209.0
+margin_right = -457.0
+margin_bottom = -169.0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Control5"]
+scale = Vector2( 0.254753, 0.254753 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 8 )
+shape = SubResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -60.0
+margin_right = 60.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 6 )
